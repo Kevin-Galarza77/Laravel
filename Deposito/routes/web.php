@@ -14,6 +14,7 @@ use App\Http\Controllers\PagesControllers;
 */
 
 Route::controller(PagesControllers::class)->group ( function (){ 
+    Route::get('/','entrar')->name('entrar');
     Route::get('/Categorias','home')->name('home');
     // Route::get('blog','blog')->name('blog');
     Route::get('/Categorias/{slog}','categorias')->name('categorias');

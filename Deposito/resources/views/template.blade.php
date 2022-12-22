@@ -30,8 +30,11 @@
                 <a href="{{route('categorias','Cerveza')}}" class='display-5 fs-5 m-2 nav-item text-light link-secondary'>
                     Cerveza
                 </a>
-                <a href="{{route('categorias','Cerveza')}}" class='display-5 fs-5 m-2 nav-item text-light link-secondary'>
+                <a href="{{route('categorias','Licor')}}" class='display-5 fs-5 m-2 nav-item text-light link-secondary'>
                     Licor
+                </a>
+                <a href="{{route('entrar')}}" class='display-5 fs-5 m-2 nav-item text-danger link-warning'>
+                    Salir
                 </a>
             </div>
 
