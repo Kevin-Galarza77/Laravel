@@ -13,11 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('categorias', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_id2');
-            $table->foreign('category_id2')
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->text('detalle');
+            $table->unsignedBigInteger('user_id3aaa');
+            $table->string('commentable_type');
+            $table->unsignedBigInteger('user_id3aaa');
+            $table->foreign('user_id')
                 ->references('id')
-                ->on('categorias')
+                ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
@@ -30,8 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('comments');
     }
 };
