@@ -41,37 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    // RELACION UNO A UNO
-    public function profile()
-    {
-        return $this->hasOne(Profile::class);
-    }
-    // RELACION UNO A MUCHOS
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
-
-    // RELACION UNO A MUCHOS
-    public function videos()
-    {
-        return $this->hasMany(Video::class);
-    }
-
-    public function comments(){
-        return $this->hasMany(Comment::class);
-    }
-
-    //RELACION MUCHOS A MUCHOS
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class);
-    }
-
-    // RELACION UNO A UNO POLIMORFICA
-    public function image()
-    {
-        return $this->morphOne(Image::class, 'imageable');
-    }
 }
