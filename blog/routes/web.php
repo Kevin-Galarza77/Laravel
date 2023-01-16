@@ -25,3 +25,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
