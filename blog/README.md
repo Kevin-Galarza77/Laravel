@@ -1,5 +1,5 @@
 <h1>Pasos para Levantar el Proyecto</h1>
-- composer install
+-composer install
 - Crear la BDD
 - php artisan migrate
 - php artisan db:seed
