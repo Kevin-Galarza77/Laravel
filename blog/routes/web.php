@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::middleware([
     })->name('dashboard');
 });
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+Route::resource('producto',ProductoController::class)->names('producto');

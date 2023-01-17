@@ -1,6 +1,8 @@
 <x-app-layout>
     <div class="container py-8 ">
-        <h1 class="uppercase text-center text-3xl font-bold">Categoria : {{$category->name}} </h1>
+        <h2 class="uppercase text-center text-3xl font-bold my-3">Listado de Post por Categoria</h2>
+        <hr>
+        <h1 class="uppercase text-center text-3xl font-bold my-3"> {{$category->name}} </h1>
 
         @foreach($posts as $post)
         <article class="mb-8 bg-white shadow-lg rounded-lg mx-5 overflow-hidden">
