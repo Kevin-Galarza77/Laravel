@@ -19,6 +19,8 @@ Route::get('/', [PostController::class,'index'])->name('posts.index');
 
 Route::get('category/{category}', [PostController::class,'category'])->name('posts.category');
 
+Route::resource('producto',ProductoController::class)->names('producto')->middleware('auth');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,4 +32,3 @@ Route::middleware([
 });
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
-Route::resource('producto',ProductoController::class)->names('producto');

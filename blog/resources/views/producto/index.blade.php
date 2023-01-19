@@ -2,6 +2,7 @@
     <h3 class="text-center display-5 my-3">Productos Disponibles</h3>
     <hr>
     <div class="m-2">
+        <a href="{{route('producto.create')}}" class="btn btn-success px-4 my-4">Crear Producto</a>
         <table id='articulos' class="table table-dark table-striped">
             <thead>
                 <tr>

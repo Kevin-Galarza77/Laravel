@@ -16,7 +16,7 @@ class Producto extends Migration
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('public_id');
+            $table->string('public_id')->nullable();
             $table->string('url');
             $table->text('descripcion');
             $table->timestamps();

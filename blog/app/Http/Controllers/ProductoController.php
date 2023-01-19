@@ -24,15 +24,22 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
 
-        $file = request()->file('imagen');
-        //uplodad se encarga de subir el archivo de imagen al servicio Cloudinary
-        //recibe 2 parametros:
-        //La ruta completa del archivo de imagen, obtenida con el método getRealPath()
-        //folder donde se quiere almacenar
-        $obj = Cloudinary::upload($file->getRealPath(), ['folder' => 'products']);
+        if ($request->hasFile('imagen')){
+            $file = request()->file('imagen');
+            //uplodad se encarga de subir el archivo de imagen al servicio Cloudinary
+            //recibe 2 parametros:
+            //La ruta completa del archivo de imagen, obtenida con el método getRealPath()
+            //folder donde se quiere almacenar
+            $obj = Cloudinary::upload($file->getRealPath(), ['folder' => 'products']);
+    
+            $public_id = $obj->getPublicId();
+            $url = $obj->getSecurePath();
+        }else{
+            $url = ' https://cdn.icon-icons.com/icons2/3001/PNG/512/default_filetype_file_empty_document_icon_187718.png';
+            $public_id = '';
+        }
 
-        $public_id = $obj->getPublicId();
-        $url = $obj->getSecurePath();
+       
 
         Producto::create([
             "nombre" => $request->nombre,
