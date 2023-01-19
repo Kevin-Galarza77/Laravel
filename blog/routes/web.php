@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,6 @@ Route::middleware([
 });
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
+Route::get('/email',[MailController::class,'getMail'])->name('newEmail')->middleware('auth');
+Route::get('/editMail',[MailController::class,'editMail'])->name('editMail')->middleware('auth');
+Route::get('/deleteMail',[MailController::class,'deleteMail'])->name('deleteMail')->middleware('auth');

@@ -14,7 +14,7 @@ class MailController extends Controller
             'title' => 'Correo gmail Prueba 1',
             'body' => 'Este es un correo electronico de prueba usando el servidor SMTP'
         ];
-        Mail::to("gabyscorrea@hotmail.es") -> send(new TestMail($details));
+        Mail::to("jimenezkevin1040@hotmail.es") -> send(new TestMail($details));
         return "Correo Electronico enviado con exito :D";
     }
 }

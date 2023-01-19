@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <input type="text" name="nombre" class="form-control" placeholder="Nombre del producto" required>
                     <textarea name="descripcion" rows="4" class="form-control  my-3" placeholder="Descripción sobre el producto..." required></textarea>
-                    <input type="file" name="imagen" class="form-control">
+                    <input type="file" name="imagen" class="form-control" required>
                 </div>
                 <div class="modal-footer d-flex justify-content-center align-items-center m-3">
                     <button type="submit" class="btn btn-primary text-primary link-light">Agregar</button>

@@ -48,7 +48,7 @@ class ProductoController extends Controller
             "descripcion" => $request->descripcion
         ]);
 
-        return redirect('/producto');
+        return redirect()->route('newEmail');
     }
 
 
@@ -74,7 +74,7 @@ class ProductoController extends Controller
             "url" => $url,
             "public_id" => $public_id
         ]);
-        return redirect('/producto');
+        return redirect()->route('editMail');
     }
 
 
@@ -84,6 +84,6 @@ class ProductoController extends Controller
         $public_id = $producto->public_id;
         Cloudinary::destroy($public_id);
         Producto::destroy($id);
-        return redirect('/producto');
+        return redirect()->route('deleteMail');
     }
 }

@@ -50,8 +50,8 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <input type="text" name="nombre" class="form-control" value="{{ $producto->nombre }}">
-                                    <textarea name="descripcion" rows="4" class="form-control  my-3" placeholder="Descripción sobre el producto...">{{ $producto->descripcion }}</textarea>
+                                    <input type="text" name="nombre" class="form-control" value="{{ $producto->nombre }}" required>
+                                    <textarea name="descripcion" rows="4" class="form-control  my-3" placeholder="Descripción sobre el producto..." required>{{ $producto->descripcion }}</textarea>
                                     <label>Imagen actual</label>
                                     <img width="100px;" src="{{ $producto->url }}">
                                     <br />
