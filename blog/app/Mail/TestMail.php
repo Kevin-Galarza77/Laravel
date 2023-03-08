@@ -20,10 +20,12 @@ class TestMail extends Mailable
      */
 
     public $data;
+    public $remitente;
 
-    public function __construct($data)
+    public function __construct($data,$remitente)
     {
         $this->data = $data;    
+        $this->remitente = $remitente;
     }
 
     public function build(){
